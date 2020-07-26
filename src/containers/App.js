@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Header from "../components/Header.js";
 //import SearchBox from '../components/SearchBox.js';
-//import PhotoCard from '../components/PhotoCard.js';
 import Footer from '../components/Footer';
 import Scroll from '../components/Scroll';
 import PhotoCard from '../components/PhotoCard';
@@ -15,11 +14,10 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError]=useState("");
   const [inputText, setInputText] = useState("");
-  const [wordsToSearch, setWordsToSearch] = useState("apple");
-
+  const [wordsToSearch, setWordsToSearch] = useState("apples");
 
   useEffect(() => {
-    fetch("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key="+process.env.REACT_APP_FLICKR_KEY+"&tags="+wordsToSearch+"&text=yummy&safe_search=1&content_type=1&per_page=25&page=1&format=json&nojsoncallback=1",{method:"GET"})
+    fetch("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key="+process.env.REACT_APP_FLICKR_KEY+"&tags="+wordsToSearch+"&safe_search=1&content_type=1&per_page=25&page=1&format=json&nojsoncallback=1",{method:"GET"})
     .then(response => response.json())
     .then((data) => {
         setIsLoaded(true);
@@ -58,7 +56,8 @@ function App() {
               <div className="f2">
                     <Header />
                     <div className="search-bar">
-                      <input 
+                      <input
+                        className="input-reset ba b--black-20 pa3 mb2 db w-100" 
                         onChange={handleChange}
                         type="text" 
                         placeholder="Type here"
@@ -66,7 +65,8 @@ function App() {
                         onKeyDown={handleEnter}
                       >
                       </input>
-                      <button 
+                      <button
+                        className="f4 link dim br-pill ph3 pv2 mb2 dib white bg-near-black grab" 
                         onClick={submitSearch}>Search
                       </button>
                     </div>

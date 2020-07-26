@@ -1,9 +1,15 @@
-
+/* 
 body{
   background: 
     linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
     linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
     linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);;
+} */
+
+body{
+background-color: #74b9ff;
+background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .header-title {
@@ -12,7 +18,11 @@ body{
 
 
 .search-bar{
-  padding-bottom: 25px;
+  margin: 0 20rem;
+}
+
+.grab{
+  cursor: -webkit-grab; cursor: grab;
 }
 
 .grow {
@@ -27,11 +37,14 @@ body{
   transform: scale(1.05);
 }
 
+img{
+  margin-bottom: 2rem;
+}
 
 
 .scroll-field{
-  background-color: white;
-  margin:10px 100px;
+  background-color: #dfe6e9;
+  margin:2rem 6rem;
 }
 
  /* Footer Section Styling */
@@ -42,15 +55,17 @@ body{
 }
 
 .links p {
-  font-size: small;
-  color:white;
+  font-size: 1rem;
+  color:#0984e3;
   font-weight: 600;
 }
 
 .footer-icon {
-  margin: 20px 10px;
-  color: white;
-  font-size: large;
+  margin: 2rem;
+  color: #0984e3;
+  font-size: 2rem;
+  border: 2px dotted #0984e3;
+  padding: 1rem;
 }
 
 
@@ -58,10 +73,14 @@ body{
   .f1-m {
       font-size: 3rem;
   }
+  .search-bar{
+    margin: 0 8rem;
+  }
 }
 
 @media screen and (min-width: 60em) {
   .f-headline-l {
       font-size: 6rem;
   }
+  
 }
