@@ -2,7 +2,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Header from "../components/Header.js";
-//import SearchBox from '../components/SearchBox.js';
 import Footer from '../components/Footer';
 import Scroll from '../components/Scroll';
 import PhotoCard from '../components/PhotoCard';
@@ -83,7 +82,6 @@ function App() {
                           />
                         )})}
                     </Scroll>
-                    
                     <Footer />
               </div>
             </div>
@@ -93,67 +91,3 @@ function App() {
 
 
 export default App;
-
-// onKeyUp={() => Delay(function() {
-//   useEffect();
-// },1000)}
-
-// const [error, setError] = useState(null);
-//   const [isLoaded, setIsLoaded] = useState(false);
-//   const [items, setItems] = useState([
-//     {
-//     setup : "",
-//     delivery : "",
-//     id: 0
-//   }]);
-    
-//   // Note: the empty deps array [] means
-//   // this useEffect will run once
-//   // similar to componentDidMount()
-//   useEffect(() => {
-//     fetch("https://sv443.net/jokeapi/v2/joke/Programming?type=twopart")
-//       .then(response => response.json())
-//       .then((data) => {
-//           setIsLoaded(true);
-//           setItems(data);
-//         },
-//         // Note: it's important to handle errors here
-//         // instead of a catch() block so that we don't swallow
-//         // exceptions from actual bugs in components.
-//         (error) => {
-//           setIsLoaded(true);
-//           setError(error);
-//         }
-//       );
-//   }, []);
-
-// if (error) {
-//   return (<div>Error: {error.message}</div>);
-// } else if (!isLoaded) {
-//   return <div>Loading...</div>;
-// } else {
-//   return (
-//   <div className="tc">
-//     <div className="f2">
-//       <Header />
-//       <SearchBox />
-//       <Scroll>
-//         <PhotoCard joke={items.setup} haha={items.delivery} id={items.id="25"}/>
-//         <PhotoCard joke={items.setup} haha={items.delivery} id={items.id="15"}/>
-//         <PhotoCard joke={items.setup} haha={items.delivery} id={items.id="80"}/>
-//       </Scroll>
-//       <Footer />
-//     </div>
-//   </div>
-//   );
-// }
-
-
-
-  // const Delay = (function() {
-  //   var timer =0;
-  //   return function(callback, ms){
-  //     clearTimeout(timer);
-  //     timer =setTimeout(callback,ms);
-  //   };
-  // })()
