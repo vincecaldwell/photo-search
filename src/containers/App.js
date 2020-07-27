@@ -56,7 +56,7 @@ function App() {
                     <Header />
                     <div className="search-container">
                       <input
-                        className="input-reset ba b--black-20 pa3 mb2 db w-100 search-bar tc" 
+                        className="input-reset ba b--black-20 pa2 mb2 db w-100 search-bar tc" 
                         onChange={handleChange}
                         type="text" 
                         placeholder="Type here"
