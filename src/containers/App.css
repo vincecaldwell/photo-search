@@ -1,28 +1,58 @@
-/* 
-body{
-  background: 
-    linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);;
-} */
 
 body{
 background-color: #74b9ff;
 background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
+
+img{
+  margin-bottom: 2rem;
+}
+
+a{
+  margin: 0 2rem;
+}
+
+
+/* Title  Section Styling */
 
 .header-title {
   color:white;
 }
 
 
-.search-bar{
-  margin: 0 20rem;
-}
+/* Search Section Styling */
 
 .grab{
   cursor: -webkit-grab; cursor: grab;
+}
+
+.search-container{
+  margin: 0 5rem;
+}
+
+.search-bar {
+  line-height: normal;
+}
+
+.grow:hover,
+.grow:focus {
+  transform: scale(1.05);
+}
+
+
+
+/* Scroll Section Styling */
+
+.scroll-field{
+  margin:2rem 8rem;
+  background-color:#dfe6e9;
+  background-image:
+  radial-gradient(circle at 100% 150%, #dfe6e9 24%, white 24%, white 28%, #dfe6e9 28%, #dfe6e9 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, #dfe6e9 24%, white 24%, white 28%, #dfe6e9 28%, #dfe6e9 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, white 10%, #dfe6e9 10%, #dfe6e9 23%, white 23%, white 30%, #dfe6e9 30%, #dfe6e9 43%, white 43%, white 50%, #dfe6e9 50%, #dfe6e9 63%, white 63%, white 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, white 5%, #dfe6e9 5%, #dfe6e9 15%, white 15%, white 20%, #dfe6e9 20%, #dfe6e9 29%, white 29%, white 34%, #dfe6e9 34%, #dfe6e9 44%, white 44%, white 49%, transparent 49%, transparent),
+  radial-gradient(circle at 0    50%, white 5%, #dfe6e9 5%, #dfe6e9 15%, white 15%, white 20%, #dfe6e9 20%, #dfe6e9 29%, white 29%, white 34%, #dfe6e9 34%, #dfe6e9 44%, white 44%, white 49%, transparent 49%, transparent);
+  background-size: 100px 50px;  
 }
 
 .grow {
@@ -32,22 +62,8 @@ background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.
   transition: transform 0.25s ease-out;
 }
 
-.grow:hover,
-.grow:focus {
-  transform: scale(1.05);
-}
 
-img{
-  margin-bottom: 2rem;
-}
-
-
-.scroll-field{
-  background-color: #dfe6e9;
-  margin:2rem 6rem;
-}
-
- /* Footer Section Styling */
+/* Footer Section Styling */
 
  .footer {
   padding:30px 0 20px 0;
@@ -61,7 +77,6 @@ img{
 }
 
 .footer-icon {
-  margin: 2rem;
   color: #0984e3;
   font-size: 2rem;
   border: 2px dotted #0984e3;
@@ -69,18 +84,52 @@ img{
 }
 
 
-@media screen and (min-width: 30em) and (max-width: 60em) {
-  .f1-m {
-      font-size: 3rem;
+
+ /* Responsive Styling */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size: 1.5rem;
   }
-  .search-bar{
-    margin: 0 8rem;
+
+  .search-container {
+    width: 100%;
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+ 
+  .scroll-field{
+    margin:1rem 2rem;
+    height: 500px;
   }
 }
 
-@media screen and (min-width: 60em) {
-  .f-headline-l {
-      font-size: 6rem;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .search-container {
+    display: inline-block;
   }
   
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
