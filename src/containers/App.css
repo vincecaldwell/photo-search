@@ -45,7 +45,7 @@ a{
 /* Scroll Section Styling */
 
 .scroll-field{
-  margin:2rem 8rem;
+  margin:2rem 12rem;
   background-color:#dfe6e9;
   background-image:
   radial-gradient(circle at 100% 150%, #dfe6e9 24%, white 24%, white 28%, #dfe6e9 28%, #dfe6e9 36%, white 36%, white 40%, transparent 40%, transparent),
@@ -99,13 +99,16 @@ a{
     .scroll-field{
       margin:1rem 2rem;
       height: 400px;
-
     }
   }
 
   @media screen and (min-width: 30em) and (max-width: 60em) {
     .search-container{
       font-size: 1.25rem;
+    }
+    .scroll-field{
+      margin:1rem 6rem;
+      height: 500px;
     }
   }
 
